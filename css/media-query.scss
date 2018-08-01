@@ -1,0 +1,80 @@
+@media (min-width: 750px) {
+  overflow: auto;
+  table{
+    display: table;
+    tab-size: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    thead{
+      display: table-header-group;
+      vertical-align: middle;
+      border-color: inherit;
+    }
+
+    tr{
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+    tr:nth-of-type(odd) {
+      background: #eee9dc;
+    }
+
+    th{
+      background-color: $black;
+      color: $white;
+      text-align: -internal-center;
+    }
+
+    td, th {
+      display: table-cell;
+      vertical-align: inherit;
+      padding: 10px;
+    }
+
+    td:nth-of-type(1):before { display: none; }
+    td:nth-of-type(2):before { display: none; }
+    td:nth-of-type(3):before { display: none; }
+    td:nth-of-type(4):before { display: none; }
+    td:nth-of-type(5):before { display: none; }
+
+    thead tr{
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+
+    button{
+      border: none;
+      height: 25px;
+      width: auto;
+      background-color: $white;
+      padding: none;
+    }
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+    tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+  }
+}
+}
+
+@media (min-width: 1024px) {
+
+  main{
+    width: 80%;
+    margin: 0 auto;
+  }
+  #container{
+    width: 70%;
+    font-size: 1.5em;
+  }
+}

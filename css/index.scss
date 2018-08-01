@@ -1,0 +1,220 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Poiret+One');
+@import 'colors';
+@import 'admin';
+@import 'media-query';
+
+html,
+body {
+  height: 100%;
+}
+
+body{
+  background-color: $bkg-color;
+  font-family: 'Poiret One', cursive;
+  font-weight: lighter;
+  font-size: 22px;
+  overflow: hidden;
+}
+
+nav{
+  background: $black;
+  color: $white;
+  font-size: 1.5em;
+  padding: .5em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  a{
+    text-align: center;
+    margin: 0 10px;
+    border-bottom: 1px solid transparent;
+    border-image: $gold-gradient;
+    border-image-slice: 1;
+
+    @media (min-width: 1024px) {
+      margin: 0 30px
+    }
+  }
+}
+
+.loading {
+  display: inline-block;
+  position: relative;
+  margin: 90px auto 0px;
+  width: 64px;
+  height: 64px;
+
+  div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    border-radius: 10px;
+    background-color: $orange;
+    animation: loading 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes loading {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 67px);
+
+  #random-button{
+    font-family: 'Poiret One', cursive;
+    position: relative;
+    font-size: 1.8em;
+    width:80%;
+    height: 125px;
+    min-height: 80px;
+    max-width: 430px;
+    margin: 100px auto 50px;
+    background-color: $white;
+    border: 3px solid transparent;
+    border-image: $gold-gradient;
+    border-image-slice: 1;
+    box-shadow: 1px 1px 12px $black;
+
+    @media (min-width: 1024px) {
+      font-size: 2.5em;
+    }
+
+    &:active{
+      transition: 0s;
+      box-shadow: none;
+
+      &:focus{
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+  }
+}
+
+#random-result{
+  margin: 50px auto 0px;
+  width: 55%;
+  line-height: 1.8;
+  max-width: 90%;
+  padding-left: 5px;
+  padding-bottom: 20px;
+  border-top: 1px solid lighten($black, 60%);
+  border-bottom: 1px solid lighten($black, 60%);
+
+  @media (min-width: 1024px) {
+    width: 70%;
+    font-size: 1.5em;
+  }
+
+  #name{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: $orange;
+    text-align: center;
+  }
+
+  #address{
+    font-size: .8em;
+  }
+}
+
+.food-icons{
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
+  li > img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+}
+.beer{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: rotate(-10deg);
+}
+.cake{
+  top: 70%;
+  left: 8%;
+  transform: rotate(-5deg);
+}
+.chef{
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  transform: rotate(-5deg);
+}
+.coffee-cup{
+  position: absolute;
+  top: 77%;
+  left: 45%;
+  transform: rotate(-10deg);
+}
+.fast-food{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: rotate(5deg);
+}
+.groceries{
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  transform: rotate(8deg);
+}
+.hamburger{
+  position: absolute;
+  top: 77%;
+  left: 80%;
+  transform: rotate(10deg);
+}
+.water{
+  position: absolute;
+  top: 55%;
+  left: 83%;
+  transform: rotate(10deg);
+}
+.salad{
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  transform: rotate(-5deg);
+}
+.sandwich{
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: rotate(5deg);
+}
+
+.hide{
+  display: none;
+}

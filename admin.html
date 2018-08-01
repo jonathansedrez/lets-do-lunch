@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./admin.html">Admin</a>
+    </nav>
+    <main>
+        <div>
+            <input id="open-add-modal" type="button" value="+">
+            <input id="filter" type="text" placeholder="Filtrar por nome">
+        </div>
+        <div class="loading"><div></div><div></div><div></div></div>
+        <table id="restaurant-table">
+            <thead>
+                <th class="hide">ID</th>
+                <th>Nome</th>
+                <th>R$</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </thead>
+            <tbody id="tbody" />
+        </table>
+        <div id="edit-modal" class="modal hide">
+            <form id="form-edit" class="form hide">
+                <h3>Editar restaurante</h3>
+                <input id="name" type="text" placeholder="Nome">
+                <input id="amount" type="text" placeholder="Valor">
+                <input id="address" type="text" placeholder="Endereço">
+                <button id="sucess-edit-button" class="success-button" type="submit">Editar</button>
+                <button id="close-edit-modal" type="button" class="danger-button">Cancelar</button>
+            </form>
+        </div>
+        <div id="add-modal" class="modal hide">
+            <form id="form-add" class="form hide">
+                <h3>Novo restaurante</h3>
+                <input id="name" type="text" placeholder="Nome">
+                <input id="amount" type="text" placeholder="Valor">
+                <input id="address" type="text" placeholder="Endereço">
+                <button id="sucess-add-button" class="success-button" type="submit">Adicionar</button>
+                <button id="close-add-modal" type="button" class="danger-button">Cancelar</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
